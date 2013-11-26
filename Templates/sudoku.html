@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+     <title>
+         SUDOKU
+     </title>
+
+     <style>
+         h1
+         {
+             color:blue;
+	     text-align:center;
+         }
+         td
+         {
+             text-align:center;
+             width:3em;
+	     height:3em;
+	     border-style:double;
+	     border-width:1px;
+	     border-color:black;
+	 }
+         
+	 td[id^=i2], td[id^=i5] {border-bottom-width:2.9px}
+	 td[id$=_2], td[id$=_5] {border-right-width:2.9px}
+
+         input 
+         {
+	     border: 0px solid;
+             height:inherit;
+	     width:inherit;
+             outline:none;
+             text-align:center;
+             font-size:1.10em;
+         }
+
+         .static
+	 {
+	     background-color:#C0C0C0
+	 }
+	 .sudoku
+	 {
+	     border-width: 0 0 1px 1px;
+	     border-spacing: 0;
+	     border-collapse: collapse;
+	     border-style: solid;
+	 }
+     </style>
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+     </script>
+
+     <script>
+
+	$(document).ready(function() {
+
+	    $("input").keypress(function(key) {
+                var item=$(this).val();
+		var t = this;
+		if (item == null || item=="") {
+		    if(key.charCode != 0 && (key.charCode < 49 || key.charCode > 57)) 
+                    	return false;
+		    if (key.charCode == 0) {
+			//alert(0);
+		    }
+		    else {
+		        //alert(String.fromCharCode(key.charCode));
+			var value=String.fromCharCode(key.charCode)
+			var ID=$(this).attr("id")
+			var data = { ID:ID, val:value };
+			//alert(data["val"]);
+			//alert(data["ID"]);
+			var args = { type:"POST", url:"/sudoku/", data:data, datatype : "json", cache : false,
+				     success : function (data) {
+                                                                //alert("you recieved"+data.succeed);
+                                                                if(data.succeed == false)
+                                                                { 
+                                                    		    //alert(data.succeed);
+                                                   		    t.style.color='#BC2727'
+                                              			}
+                                              			if(data.succeed == true)
+                                              			{ 
+                                                   		    //alert(data.succeed);
+                                                   		    t.style.color='#121111'
+								    if(data.win == 9)
+									alert("you won the game :D ");
+                                                           	}
+                                     }, 
+				     error:function (xhr, ajaxOptions, thrownError, request, error) {
+						     alert('xrs.status = ' + xhr.status + '\n' + 
+            					           'thrown error = ' + thrownError + '\n' +
+            					     	   'xhr.statusText = '  + xhr.statusText + '\n' +
+            						   'request = ' + request + '\n' +
+            						   'error = ' + error); 
+				     }
+                                    
+			};
+			$.ajax(args);
+                    }
+		}
+		else {
+		    if (key.charCode != 0)
+		    	return false;
+		    else {
+			//alert(0);
+			var value=0
+			var ID=$(this).attr("id")
+			var data = { ID:ID, val:value };
+			//alert(data["val"]);
+			//alert(data["ID"]);
+			var args = { type:"POST", url:"/sudoku/", data:data, complete:function(){},
+				     success : function (data) { t.value = "" }, 
+				     error:function (xhr, ajaxOptions, thrownError, request, error) {
+						     alert('xrs.status = ' + xhr.status + '\n' + 
+            					           'thrown error = ' + thrownError + '\n' +
+            					     	   'xhr.statusText = '  + xhr.statusText + '\n' +
+            						   'request = ' + request + '\n' +
+            						   'error = ' + error); } 
+			};
+			$.ajax(args);
+		    }
+		}
+            });
+
+	    $("input").hover(function(){
+    		$(this).css("background-color","#F5F6CE");
+	    },
+            function(){
+    		$(this).css("background-color","inherit");
+	    });
+
+	    $("input").click(function(){
+                $(this).css("background-color","#F4FA58");
+	    });
+
+	    $("#easy").click(function() {
+		$.ajax({ url:"/sudoku/", data : {val:1}, success:function(result) { $("#div1").html(result); }
+		      });
+  	    });
+
+	    $("#hard").click(function() {
+		$.ajax({ url:"/sudoku/", data : {val:2}, success:function(result) { $("#div1").html(result); }
+		      });
+  	    })
+
+	    $("#clear").click(function() {
+		$.ajax({ url:"/sudoku/", data : {val:3}, success:function(result) { $("#div1").html(result); }
+		      });
+  	    });
+
+        });
+
+     </script>
+
+ </head>
+
+ <body>
+    
+     <div id = "div1" style = "text-align:center;">
+     <h1 style="text-align:center;">MY APP</h1>
+     
+     {% include "table.html" %}
+     
+     
+     <p style = "text-align:center;">
+     	<button type="button" id="hard">New Game - Hard</button>
+     	<button type="button" id="easy">New Game - Easy</button>
+	<button type="button" id="clear">Clear</button>
+     </p>
+
+     </div>
+ </body>
+
+</html>

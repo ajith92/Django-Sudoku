@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>
+         Sudoku
+     </title>
+     <style>
+         h1
+         {
+             color:red;
+	     text-align:center;
+         }
+         td
+         {
+             text-align:center;
+             width:3em;
+	     height:3em;
+	     border-style:double;
+	     border-width:1px;
+	     border-color:black;
+	 }
+	 td[id^=i2], td[id^=i5] {border-bottom-width:2.9px}
+	 td[id$=_2], td[id$=_5] {border-right-width:2.9px}
+	 .static
+	 {
+	     background-color:#C0C0C0
+ 	 }
+	 .sudoku
+	 {
+	     border-width: 0 0 1px 1px;
+	     border-spacing: 0;
+	     border-collapse: collapse;
+	     border-style: solid;
+         } 	
+     </style>
+     <script>
+  	 var current_cell = null;
+         function initialize() {
+             //window.alert("YOUR GAME IS ABOUT TO BEGIN...");
+	     var col,row;
+	     for (row=0;row<=8;row++) {
+                 for (col=0;col<=8;col++) {
+		     var cell=document.getElementById('i'+row+'_'+col);
+		     if (!parseInt(cell.innerHTML)) {
+		         cell.onclick=selectCell;
+			 cell.className='tofill';
+		     }
+		 }
+	     }
+    	     document.onkeypress=keyPress;
+	 }
+
+	 // mouse button event handler
+	 function selectCell() {
+	     if (current_cell!==null) {
+	         current_cell.className='tofill';
+	     }
+	     current_cell=this;
+ 	     current_cell.className='selected';
+	 }
+
+	 function keyPress(evt) {
+	     if (current_cell==null)
+		return;
+    	     var key;
+	     if(evt)
+		key=String.fromCharCode(evt.charCode);
+	     else
+		key=String.fromCharCode(event.keyCode);
+	     if(key==' ')
+		current_cell.innerHTML='';
+   	     else if(key>=1 && key<=9) {
+		current_cell.innerHTML=key;
+		str=current_cell.id
+		r=parseInt(str.charAt(1));
+		c=parseInt(str.charAt(3));
+		item=current_cell.innerHTML
+		window.alert(item);
+	    }
+	 }
+     </script>
+ </head>
+ <body onload="initialize();">
+     <h1 style="text-align:center;">SUDOKU</h1>
+     {% include "table.html" %}
+     <button align="middle" type="button">New Game</button> 
+ </body>
+</html>

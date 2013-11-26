@@ -1,0 +1,28 @@
+h1
+{
+color:red;
+text-align:center;
+}
+td
+{
+text-align:center;
+width:3em;
+height:3em;
+border-style:double;
+border-width:1px;
+border-color:black;
+}
+td[id^=i2], td[id^=i5] {border-bottom-width:2.9px}
+td[id$=_2], td[id$=_5] {border-right-width:2.9px}
+.static
+{
+background-color:#C0C0C0
+}
+.sudoku
+{
+border-width: 0 0 1px 1px;
+border-spacing: 0;
+border-collapse: collapse;
+border-style: solid;
+}
+

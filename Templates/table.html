@@ -1,0 +1,425 @@
+     <table class="sudoku" align="center">
+         <tr>
+             {% if i00 %} 
+	     	<td id="i0_0" class="static">{{i00}}</td>         	
+	     {% else %}
+            	<td id="i0_0" class="edit"><input id="i00" maxlength="1" autocomplete= "off"></td>
+             {% endif %}
+             {% if i01 %}          	
+	     	<td id="i0_1" class="static">{{i01}}</td>
+	     {% else %}
+		<td id="i0_1" class="edit"><input id="i01" maxlength="1" autocomplete= "off"></td>
+             {% endif %}
+             {% if i02 %}          	
+	     	<td id="i0_2" class="static">{{i02}}</td>
+	     {% else %}
+		<td id="i0_2" class="edit"><input id="i02" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+             {% if i03 %}          	
+	     	<td id="i0_3" class="static">{{i03}}</td>
+	     {% else %}
+		<td id="i0_3" class="edit"><input id="i03" maxlength="1" autocomplete= "off"></td>
+             {% endif %}
+             {% if i04 %}          	
+	     	<td id="i0_4" class="static">{{i04}}</td>         	
+             {% else %}
+		<td id="i0_4" class="edit"><input id="i04" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+             {% if i05 %} 
+	     	<td id="i0_5" class="static">{{i05}}</td>         	
+	     {% else %}
+		<td id="i0_5" class="edit"><input id="i05" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i06 %} 
+	     	<td id="i0_6" class="static">{{i06}}</td>         	
+	     {% else %}
+		<td id="i0_6" class="edit"><input id="i06" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i07 %} 
+	     	<td id="i0_7" class="static">{{i07}}</td>         	
+	     {% else %}
+		<td id="i0_7" class="edit"><input id="i07" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i08 %} 
+	     	<td id="i0_8" class="static">{{i08}}</td>         	
+	     {% else %}
+		<td id="i0_8" class="edit"><input id="i08" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+         </tr>
+         <tr>
+             {% if i10 %}
+	     	<td id="i1_0" class="static">{{i10}}</td>         	
+	     {% else %}
+		<td id="i1_0" class="edit"><input id="i10" maxlength="1" autocomplete= "off"></td>
+             {% endif %}
+             {% if i11 %}
+             	<td id="i1_1" class="static">{{i11}}</td>         	
+	     {% else %}
+		<td id="i1_1" class="edit"><input id="i11" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i12 %}
+             	<td id="i1_2" class="static">{{i12}}</td>         	
+	     {% else %}
+		<td id="i1_2" class="edit"><input id="i12" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i13 %}
+             	<td id="i1_3" class="static">{{i13}}</td>         	
+	     {% else %}
+		<td id="i1_3" class="edit"><input id="i13" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i14 %}
+             	<td id="i1_4" class="static">{{i14}}</td>         	
+	     {% else %}
+		<td id="i1_4" class="edit"><input id="i14" maxlength="1" autocomplete= "off"></td>
+             {% endif %}
+             {% if i15 %}
+             	<td id="i1_5" class="static">{{i15}}</td>         	
+	     {% else %}
+		<td id="i1_5" class="edit"><input id="i15" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i16 %}
+             	<td id="i1_6" class="static">{{i16}}</td>         	
+	     {% else %}
+		<td id="i1_6" class="edit"><input id="i16" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+             {% if i17 %}
+             	<td id="i1_7" class="static">{{i17}}</td>         	
+	     {% else %}
+		<td id="i1_7" class="edit"><input id="i17" maxlength="1" autocomplete= "off"></td>
+             {% endif %}
+             {% if i18 %}
+             	<td id="i1_8" class="static">{{i18}}</td>
+	     {% else %}
+		<td id="i1_8" class="edit"><input id="i18" maxlength="1" autocomplete= "off"></td>	         	
+	     {% endif %}
+         </tr>	    
+         <tr>
+	     {% if i20 %}
+		<td id="i2_0" class="static">{{i20}}</td>         	
+	     {% else %}
+		<td id="i2_0" class="edit"><input id="i20" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i21 %}
+		<td id="i2_1" class="static">{{i21}}</td>         	
+	     {% else %}
+		<td id="i2_1" class="edit"><input id="i21" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+	     {% if i22 %}
+  		<td id="i2_2" class="static">{{i22}}</td>         	
+	     {% else %}
+		<td id="i2_2" class="edit"><input id="i22" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+ 	     {% if i23 %}
+		<td id="i2_3" class="static">{{i23}}</td>         	
+	     {% else %}
+		<td id="i2_3" class="edit"><input id="i23" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+	     {% if i24 %}
+		<td id="i2_4" class="static">{{i24}}</td>         	
+	     {% else %}
+		<td id="i2_4" class="edit"><input id="i24" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+	     {% if i25 %}
+		<td id="i2_5" class="static">{{i25}}</td>         	
+	     {% else %}
+		<td id="i2_5" class="edit"><input id="i25" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+  	     {% if i26 %}
+		<td id="i2_6" class="static">{{i26}}</td>         	
+	     {% else %}
+		<td id="i2_6" class="edit"><input id="i26" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+	     {% if i27 %}
+		<td id="i2_7" class="static">{{i27}}</td>         	
+	     {% else %}
+		<td id="i2_7" class="edit"><input id="i27" maxlength="1" autocomplete= "off"></td>         	
+             {% endif %}
+	     {% if i28 %}
+		<td id="i2_8" class="static">{{i28}}</td>         	
+	     {% else %}
+		<td id="i2_8" class="edit"><input id="i28" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+         </tr>
+         <tr>
+	     {% if i30 %}
+	     	<td id="i3_0" class="static">{{i30}}</td>         	
+	     {% else %}
+	     	<td id="i3_0" class="edit"><input id="i30" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i31 %}
+	     	<td id="i3_1" class="static">{{i31}}</td>       	
+	     {% else %}
+		<td id="i3_1" class="edit"><input id="i31" maxlength="1" autocomplete= "off"></td>       	
+	     {% endif %}
+	     {% if i32 %}
+	     	<td id="i3_2" class="static">{{i32}}</td>         	
+	     {% else %}
+		<td id="i3_2" class="edit"><input id="i32" maxlength="1" autocomplete= "off"></td>       	
+	     {% endif %}
+	     {% if i33 %}
+	     	<td id="i3_3" class="static">{{i33}}</td>         	
+	     {% else %}
+		<td id="i3_3" class="edit"><input id="i33" maxlength="1" autocomplete= "off"></td>       	
+	     {% endif %}
+	     {% if i34 %}
+	     	<td id="i3_4" class="static">{{i34}}</td>         	
+	     {% else %}
+		<td id="i3_4" class="edit"><input id="i34" maxlength="1" autocomplete= "off"></td>       	
+	     {% endif %}
+	     {% if i35 %}
+	     	<td id="i3_5" class="static">{{i35}}</td>         	
+	     {% else %}
+		<td id="i3_5" class="edit"><input id="i35" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i36 %}
+	     	<td id="i3_6" class="static">{{i36}}</td>         	
+	     {% else %}
+	    	<td id="i3_6" class="edit"><input id="i36" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i37 %}
+	     	<td id="i3_7" class="static">{{i37}}</td>         	
+	     {% else %}
+	     	<td id="i3_7" class="edit"><input id="i37" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i38 %}
+	     	<td id="i3_8" class="static">{{i38}}</td>         	
+	     {% else %}
+		<td id="i3_8" class="edit"><input id="i38" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+         </tr>	   
+         <tr>
+	     {% if i40 %}
+	     	<td id="i4_0" class="static">{{i40}}</td>         	
+	     {% else %}
+		<td id="i4_0" class="edit"><input id="i40" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+             {% if i41 %}
+		<td id="i4_1" class="static">{{i41}}</td>         	
+	     {% else %}
+	     	<td id="i4_1" class="edit"><input id="i41" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+             {% if i42 %}
+		<td id="i4_2" class="static">{{i42}}</td>         	
+	     {% else %}
+		<td id="i4_2" class="edit"><input id="i42" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+             {% if i43 %}
+		<td id="i4_3" class="static">{{i43}}</td>        	
+	     {% else %}
+		<td id="i4_3" class="edit"><input id="i43" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+             {% if i44 %}
+		<td id="i4_4" class="static">{{i44}}</td>         	
+	     {% else %}
+		<td id="i4_4" class="edit"><input id="i44" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i45 %}
+		<td id="i4_5" class="static">{{i45}}</td>         	
+	     {% else %}
+		<td id="i4_5" class="edit"><input id="i45" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i46 %}
+		<td id="i4_6" class="static">{{i46}}</td>         	
+	     {% else %}
+		<td id="i4_6" class="edit"><input id="i46" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+             {% if i47 %}
+		<td id="i4_7" class="static">{{i47}}</td>         	
+	     {% else %}
+		<td id="i4_7" class="edit"><input id="i47" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i48 %}
+		<td id="i4_8" class="static">{{i48}}</td>         	
+	     {% else %}
+		<td id="i4_8" class="edit"><input id="i48" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+         </tr>	    
+         <tr>
+	     {% if i50 %}
+	     	<td id="i5_0" class="static">{{i50}}</td>         	
+	     {% else %}
+		<td id="i5_0" class="edit"><input id="i50" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i51 %}
+		<td id="i5_1" class="static">{{i51}}</td>         	
+	     {% else %}
+		<td id="i5_1" class="edit"><input id="i51" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i52 %}
+		<td id="i5_2" class="static">{{i52}}</td>         	
+	     {% else %}
+		<td id="i5_2" class="edit"><input id="i52" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i53 %}
+		<td id="i5_3" class="static">{{i53}}</td>         	
+	     {% else %}
+		<td id="i5_3" class="edit"><input id="i53" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i54 %}
+		<td id="i5_4" class="static">{{i54}}</td>         	
+	     {% else %}
+		<td id="i5_4" class="edit"><input id="i54" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i55 %}
+		<td id="i5_5" class="static">{{i55}}</td>         	
+	     {% else %}
+		<td id="i5_5" class="edit"><input id="i55" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i56 %}
+		<td id="i5_6" class="static">{{i56}}</td>         	
+	     {% else %}
+		<td id="i5_6" class="edit"><input id="i56" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i57 %}
+		<td id="i5_7" class="static">{{i57}}</td>         	
+	     {% else %}
+		<td id="i5_7" class="edit"><input id="i57" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i58 %}
+		<td id="i5_8" class="static">{{i58}}</td>         	
+	     {% else %}
+		<td id="i5_8" class="edit"><input id="i58" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+         </tr>	   
+         <tr>
+	     {% if i60 %}
+	     	<td id="i6_0" class="static">{{i60}}</td>         	
+	     {% else %}
+		<td id="i6_0" class="edit"><input id="i60" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i61 %}
+		<td id="i6_1" class="static">{{i61}}</td>         	
+	     {% else %}
+		<td id="i6_1" class="edit"><input id="i61" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i62 %}
+		<td id="i6_2" class="static">{{i62}}</td>         	
+	     {% else %}
+		<td id="i6_2" class="edit"><input id="i62" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i63 %}
+		<td id="i6_3" class="static">{{i63}}</td>         	
+	     {% else %}
+		<td id="i6_3" class="edit"><input id="i63" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i64 %}
+		<td id="i6_4" class="static">{{i64}}</td>         	
+	     {% else %}
+		<td id="i6_4" class="edit"><input id="i64" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i65 %}
+		<td id="i6_5" class="static">{{i65}}</td>         	
+	     {% else %}
+		<td id="i6_5" class="edit"><input id="i65" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i66 %}
+		<td id="i6_6" class="static">{{i66}}</td>         	
+	     {% else %}
+		<td id="i6_6" class="edit"><input id="i66" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i67 %}
+		<td id="i6_7" class="static">{{i67}}</td>         	
+	     {% else %}
+		<td id="i6_7" class="edit"><input id="i67" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i68 %}
+		<td id="i6_8" class="static">{{i68}}</td>         	
+	     {% else %}
+		<td id="i6_8" class="edit"><input id="i68" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+         </tr>	   
+         <tr>
+	     {% if i70 %}
+	     	<td id="i7_0" class="static">{{i70}}</td>         	
+	     {% else %}
+		<td id="i7_0" class="edit"><input id="i70" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i71 %}
+		<td id="i7_1" class="static">{{i71}}</td>         	
+	     {% else %}
+		<td id="i7_1" class="edit"><input id="i71" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i72 %}
+		<td id="i7_2" class="static">{{i72}}</td>         	
+	     {% else %}
+		<td id="i7_2" class="edit"><input id="i72" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i73 %}
+		<td id="i7_3" class="static">{{i73}}</td>         	
+	     {% else %}
+		<td id="i7_3" class="edit"><input id="i73" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i74 %}
+		<td id="i7_4" class="static">{{i74}}</td>         	
+	     {% else %}
+		<td id="i7_4" class="edit"><input id="i74" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i75 %}
+		<td id="i7_5" class="static">{{i75}}</td>         	
+	     {% else %}
+		<td id="i7_5" class="edit"><input id="i75" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i76 %}
+		<td id="i7_6" class="static">{{i76}}</td>
+	     {% else %}
+		<td id="i7_6" class="edit"><input id="i76" maxlength="1" autocomplete= "off"></td>         	         	
+	     {% endif %}
+	     {% if i77 %}
+		<td id="i7_7" class="static">{{i77}}</td>         	
+	     {% else %}
+		<td id="i7_7" class="edit"><input id="i77" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i78 %}
+		<td id="i7_8" class="static">{{i78}}</td>         	
+	     {% else %}
+		<td id="i7_8" class="edit"><input id="i78" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+         </tr>	    
+         <tr>
+	     {% if i80 %}
+	     	<td id="i8_0" class="static">{{i80}}</td>         	
+	     {% else %}
+	       	<td id="i8_0" class="edit"><input id="i80" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i81 %}
+		<td id="i8_1" class="static">{{i81}}</td>         	
+	     {% else %}
+		<td id="i8_1" class="edit"><input id="i81" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i82 %}
+		<td id="i8_2" class="static">{{i82}}</td>         	
+	     {% else %}
+		<td id="i8_2" class="edit"><input id="i82" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i83 %}
+		<td id="i8_3" class="static">{{i83}}</td>         	
+	     {% else %}
+		<td id="i8_3" class="edit"><input id="i83" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i84 %}
+		<td id="i8_4" class="static">{{i84}}</td>         	
+	     {% else %}
+		<td id="i8_4" class="edit"><input id="i84" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i85 %}
+		<td id="i8_5" class="static">{{i85}}</td>         	
+	     {% else %}
+		<td id="i8_5" class="edit"><input id="i85" maxlength="1" autocomplete= "off"></td>
+	     {% endif %}
+	     {% if i86 %}
+		<td id="i8_6" class="static">{{i86}}</td>         	
+	     {% else %}
+		<td id="i8_6" class="edit"><input id="i86" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i87 %}
+		<td id="i8_7" class="static">{{i87}}</td>         	
+	     {% else %}
+		<td id="i8_7" class="edit"><input id="i87" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+	     {% if i88 %}
+		<td id="i8_8" class="static">{{i88}}</td>         	
+	     {% else %}
+		<td id="i8_8" class="edit"><input id="i88" maxlength="1" autocomplete= "off"></td>         	
+	     {% endif %}
+         </tr>	   
+     </table>
